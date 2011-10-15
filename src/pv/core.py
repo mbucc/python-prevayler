@@ -80,8 +80,8 @@ class Log(object):
                 try:
                     try:
                         while True:
-                            self.serialId += 1
                             tx = pickle.load(log)
+                            self.serialId += 1
                             sentry = pickle.load(log);
                             assert self.serialId == sentry.serialId                                                        
                             yield tx
